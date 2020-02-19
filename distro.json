@@ -17,19 +17,13 @@
 			"name": "Dnipro A",
 			"members": [
 				{
-					"name": "One",
-					"difficulty": "5",
-					"rate": "5"
+					"name": "One"
 				},
 				{
-					"name": "Two",
-					"difficulty": "5",
-					"rate": "5"
+					"name": "Two"
 				},
 				{
-					"name": "Three",
-					"difficulty": "5",
-					"rate": "5"
+					"name": "Three"
 				}			
 			]
 		},
@@ -37,19 +31,13 @@
 			"name": "Lviv A",
 			"members": [
 				{
-					"name": "One",
-					"difficulty": "5",
-					"rate": "5"
+					"name": "One"
 				},
 				{
-					"name": "Two",
-					"difficulty": "5",
-					"rate": "5"
+					"name": "Two"
 				},
 				{
-					"name": "Three",
-					"difficulty": "5",
-					"rate": "5"
+					"name": "Three"
 				}		
 			]
 		},
@@ -57,19 +45,13 @@
 			"name": "PE",
 			"members": [
 				{
-					"name": "One",
-					"difficulty": "5",
-					"rate": "5"
+					"name": "One"
 				},
 				{
-					"name": "Two",
-					"difficulty": "5",
-					"rate": "5"
+					"name": "Two"
 				},
 				{
-					"name": "Three",
-					"difficulty": "5",
-					"rate": "5"
+					"name": "Three"
 				}			
 			]
 		},
@@ -77,19 +59,13 @@
 			"name": "Kharkiv A",
 			"members": [
 				{
-					"name": "One",
-					"difficulty": "5",
-					"rate": "5"
+					"name": "One"
 				},
 				{
-					"name": "Two",
-					"difficulty": "5",
-					"rate": "5"
+					"name": "Two"
 				},
 				{
-					"name": "Three",
-					"difficulty": "5",
-					"rate": "5"
+					"name": "Three"
 				}		
 			]
 		}
