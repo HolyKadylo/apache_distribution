@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sme33/public_html
+    - /bin/rm -rf $DEPLOYPATH/*
+    #- /bin/cp -R src $DEPLOYPATH
+    - /bin/cp * $DEPLOYPATH
+    #- /bin/bash /home/sme33/public_html/dev/build.sh
+    #- ^^ should be made manually

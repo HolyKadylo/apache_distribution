@@ -1,0 +1,98 @@
+{
+	"Shift type": "Morning",
+	"Shift leader": "Someone",
+	"SMEs":[
+		{
+			"name": "Arkhech"
+		},
+		{
+			"name": "Den Serokoorow"
+		},
+		{
+			"name": "Uasya Sharko"
+		}
+	],
+	"CSGroups":[
+		{
+			"name": "Dnipro A",
+			"members": [
+				{
+					"name": "One",
+					"difficulty": "5",
+					"rate": "5"
+				},
+				{
+					"name": "Two",
+					"difficulty": "5",
+					"rate": "5"
+				},
+				{
+					"name": "Three",
+					"difficulty": "5",
+					"rate": "5"
+				}			
+			]
+		},
+		{
+			"name": "Lviv A",
+			"members": [
+				{
+					"name": "One",
+					"difficulty": "5",
+					"rate": "5"
+				},
+				{
+					"name": "Two",
+					"difficulty": "5",
+					"rate": "5"
+				},
+				{
+					"name": "Three",
+					"difficulty": "5",
+					"rate": "5"
+				}		
+			]
+		},
+		{
+			"name": "PE",
+			"members": [
+				{
+					"name": "One",
+					"difficulty": "5",
+					"rate": "5"
+				},
+				{
+					"name": "Two",
+					"difficulty": "5",
+					"rate": "5"
+				},
+				{
+					"name": "Three",
+					"difficulty": "5",
+					"rate": "5"
+				}			
+			]
+		},
+		{
+			"name": "Kharkiv A",
+			"members": [
+				{
+					"name": "One",
+					"difficulty": "5",
+					"rate": "5"
+				},
+				{
+					"name": "Two",
+					"difficulty": "5",
+					"rate": "5"
+				},
+				{
+					"name": "Three",
+					"difficulty": "5",
+					"rate": "5"
+				}		
+			]
+		}
+	]
+
+}
