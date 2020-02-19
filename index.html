@@ -50,7 +50,8 @@
         function constructTable(selector) { 
 		obj = JSON.parse(json);
 		smelist = obj["SMEs"]
-
+		
+		distributeByTeam(obj, smelist)
             // Getting the all column names 
             var cols = Headers(smelist, selector);   
    
@@ -71,6 +72,31 @@
                 $(selector).append(row); 
             } 
         } 
+	
+	// Newly introduced function
+	// Takes JSON of the distribution and 
+	// SME list (to count them easier
+	// returns mapping
+	// SME number : Teams
+	function distributeByTeam(obj, smelist){
+		var teamlist = obj["CSGroups"]
+		var teams = new Array();
+		for (var i = 0; i < teamlist.length; i++){
+
+			//each team			
+			var team = {
+				name:teamlist[i]["name"], 
+				numMembers:teamlist[i]["members"].length
+			};
+
+			console.log(team.name);
+			console.log(team.numMembers);
+			teams.concat(team);
+		}
+		
+
+		
+	}
           
         function Headers(smelist, selector) { 
 		// console.log(smelist);
