@@ -9,7 +9,7 @@ fetch('https://sme.3-3.info/distro.json')
 })
 
 var skillsRaw = "{}";
-fetch('https://sme.3-3.info/distro.json')
+fetch('https://sme.3-3.info/skills.json')
 .then(response => response.text())
 .then((data) => {
 	skillsRaw = data
