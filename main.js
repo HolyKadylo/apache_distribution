@@ -1,11 +1,11 @@
 var el_up = document.getElementById("GFG_UP");
 
 // https://stackoverflow.com/questions/196498/how-do-i-load-the-contents-of-a-text-file-into-a-javascript-variable
-var distributionRaw = "{}";
+var unsortedRaw = "{}";
 fetch('https://sme.3-3.info/distro.json')
 .then(response => response.text())
 .then((data) => {
-	distributionRaw = data
+	unsortedRaw = data
 })
 
 var skillsRaw = "{}";
@@ -15,21 +15,21 @@ fetch('https://sme.3-3.info/skills.json')
 	skillsRaw = data
 })
 
-var distibution = JSON.parse(distributionRaw);
+var unsorted = JSON.parse(unsortedRaw);
 var skills = JSON.parse(skillsRaw);
 
 // https://www.tutorialrepublic.com/javascript-tutorial/javascript-json-parsing.php
 
 
 function constructTable(selector) { 
-	distibution = JSON.parse(distributionRaw);
-	smelist = distibution["SMEs"]
+	unsorted = JSON.parse(unsortedRaw);
+	smelist = unsorted["SMEs"]
 
-	// distributes by number of teammates		
-	distributeByTeam(distibution, smelist)
+	// distributes the current people on the shift		
+	distribute(unsorted, smelist)
 
 
-    // Getting the all column names 
+    // Constructing header of the table actually
     var cols = Headers(smelist, selector);   
 
     // Traversing the JSON data 
@@ -50,12 +50,11 @@ function constructTable(selector) {
     } 
 } 
 
-// Takes JSON of the distribution and 
-// SME list (to count them easier
-// returns mapping
-// SME number : Teams
-function distributeByTeam(distibution, smelist){
-	var teamlist = distibution["CSGroups"]
+// Takes JSON of the unsorted distribution and 
+// SME list (to count them easier)
+// returns an array that can be easily distributed among SMEs
+function distribute(unsorted, smelist){
+	var teamlist = unsorted["CSGroups"]
 	var teams = new Array();
 	for (var i = 0; i < teamlist.length; i++){
 
