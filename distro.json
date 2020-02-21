@@ -17,13 +17,13 @@
 			"name": "Dnipro A",
 			"members": [
 				{
-					"name": "One"
+					"name": "One DA"
 				},
 				{
-					"name": "Two"
+					"name": "Two DA"
 				},
 				{
-					"name": "Three"
+					"name": "Three DA"
 				}			
 			]
 		},
@@ -31,19 +31,19 @@
 			"name": "Lviv A",
 			"members": [
 				{
-					"name": "One"
+					"name": "One LA"
 				},
 				{
-					"name": "Two"
+					"name": "Two LA"
 				},
 				{
-					"name": "Three"
+					"name": "Three LA"
 				},
 				{
-					"name": "Four"
+					"name": "Four LA"
 				},
 				{
-					"name": "Five"
+					"name": "Five LA"
 				}		
 			]
 		},
@@ -51,16 +51,16 @@
 			"name": "PE",
 			"members": [
 				{
-					"name": "One"
+					"name": "One PE"
 				},
 				{
-					"name": "Two"
+					"name": "Two PE"
 				},
 				{
-					"name": "Three"
+					"name": "Three PE"
 				},
 				{
-					"name": "Four"
+					"name": "Four PE"
 				}		
 			]
 		},
@@ -68,13 +68,13 @@
 			"name": "Kharkiv A",
 			"members": [
 				{
-					"name": "One"
+					"name": "One KA"
 				},
 				{
-					"name": "Two"
+					"name": "Two KA"
 				},
 				{
-					"name": "Three"
+					"name": "Three KA"
 				}		
 			]
 		}

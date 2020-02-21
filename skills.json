@@ -1,0 +1,79 @@
+{
+	"diff-coeffs":{
+		"newbie":"1",
+		"padawan":"1.5",
+		"guru":"1.9",
+		"jedi":"3"
+	},
+
+	"rate-coeffs":{
+		"newbie":"10",
+		"padawan":"4",
+		"guru":"1.5",
+		"jedi":"1"
+	},
+
+	"people":[
+
+		{
+		"name": "One DA",
+		"skill": "newbie"
+		},
+		{
+		"name": "Two DA",
+		"skill": "newbie"
+		},
+		{
+		"name": "Three DA",
+		"skill": "newbie"
+		},		
+		{
+		"name": "One LA",
+		"skill": "newbie"
+		},
+		{
+		"name": "Two LA",
+		"skill": "newbie"
+		},
+		{
+		"name": "Three LA",
+		"skill": "newbie"
+		},
+		{
+		"name": "Four LA",
+		"skill": "newbie"
+		},
+		{
+		"name": "Five LA",
+		"skill": "newbie"	
+		},
+		{
+		"name": "One PE",
+		"skill": "newbie"
+		},
+		{
+		"name": "Two PE",
+		"skill": "newbie"
+		},
+		{
+		"name": "Three PE",
+		"skill": "newbie"
+		},
+		{
+		"name": "Four PE",
+		"skill": "newbie"		
+		},
+		{
+		"name": "One KA",
+		"skill": "newbie"
+		},
+		{
+		"name": "Two KA",
+		"skill": "newbie"
+		},
+		{
+		"name": "Three KA",
+		"skill": "newbie"
+		}
+	]
+}
