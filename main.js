@@ -25,15 +25,16 @@ function constructTable(selector) {
 	unsorted = JSON.parse(unsortedRaw);
 	smelist = unsorted["SMEs"]
 
-	// distributes the current people on the shift		
-	distribute(unsorted, smelist)
+	// distributes the current people on the shift	
+	// sorted contains actual commands	
+	var sorted = distribute(unsorted, smelist)
 
 
     // Constructing header of the table actually
     var cols = Headers(smelist, selector);   
 
     // Traversing the JSON data 
-    for (var i = 0; i < smelist.length; i++) { 
+    for (var i = 0; i < sorted.length; i++) { 
         var row = $('<tr/>');    
         for (var colIndex = 0; colIndex < cols.length; colIndex++) 
         { 
@@ -67,11 +68,17 @@ function distribute(unsorted, smelist){
 	}
 
 	//https://www.w3schools.com/js/js_array_sort.asp
-	// TODO understand how to sort
+	// teams are sorted from biggest to smallest
+	// by return b.numMembers - a.numMembers
+
+	var skills
 	var sorted = teams.sort(function(a, b){
+		
 		return b.numMembers - a.numMembers
 	});
 	teams = sorted;
+
+	
 }
   
 // creates header of the table

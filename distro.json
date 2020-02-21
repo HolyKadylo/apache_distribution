@@ -12,72 +12,52 @@
 			"name": "Uasya Sharko"
 		}
 	],
-	"CSGroups":[
+	"CSs":[		
 		{
-			"name": "Dnipro A",
-			"members": [
-				{
-					"name": "One DA"
-				},
-				{
-					"name": "Two DA"
-				},
-				{
-					"name": "Three DA"
-				}			
-			]
+			"name": "One DA"
 		},
 		{
-			"name": "Lviv A",
-			"members": [
-				{
-					"name": "One LA"
-				},
-				{
-					"name": "Two LA"
-				},
-				{
-					"name": "Three LA"
-				},
-				{
-					"name": "Four LA"
-				},
-				{
-					"name": "Five LA"
-				}		
-			]
+			"name": "Two DA"
 		},
 		{
-			"name": "PE",
-			"members": [
-				{
-					"name": "One PE"
-				},
-				{
-					"name": "Two PE"
-				},
-				{
-					"name": "Three PE"
-				},
-				{
-					"name": "Four PE"
-				}		
-			]
+			"name": "Three DA"
 		},
 		{
-			"name": "Kharkiv A",
-			"members": [
-				{
-					"name": "One KA"
-				},
-				{
-					"name": "Two KA"
-				},
-				{
-					"name": "Three KA"
-				}		
-			]
-		}
+			"name": "One LA"
+		},
+		{
+			"name": "Two LA"
+		},
+		{
+			"name": "Three LA"
+		},
+		{
+			"name": "Four LA"
+		},
+		{
+			"name": "Five LA"
+		},
+		{
+			"name": "One PE"
+		},
+		{
+			"name": "Two PE"
+		},
+		{
+			"name": "Three PE"
+		},
+		{
+			"name": "Four PE"
+		},
+		{
+			"name": "One KA"
+		},
+		{
+			"name": "Two KA"
+		},
+		{
+			"name": "Three KA"
+		}		
 	]
 
 }
