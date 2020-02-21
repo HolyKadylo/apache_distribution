@@ -1,23 +1,23 @@
 var el_up = document.getElementById("GFG_UP");
 
 // https://stackoverflow.com/questions/196498/how-do-i-load-the-contents-of-a-text-file-into-a-javascript-variable
-var json = "{}";
+var distribution = "{}";
 fetch('https://sme.3-3.info/distro.json')
 .then(response => response.text())
 .then((data) => {
-	json = data
+	distribution = data
 })
-var obj = JSON.parse(json);
+var distibutionObject = JSON.parse(distribution);
 
 // https://www.tutorialrepublic.com/javascript-tutorial/javascript-json-parsing.php
 
 
 function constructTable(selector) { 
-	obj = JSON.parse(json);
-	smelist = obj["SMEs"]
+	distibutionObject = JSON.parse(distribution);
+	smelist = distibutionObject["SMEs"]
 
 	// distributes by number of teammates		
-	distributeByTeam(obj, smelist)
+	distributeByTeam(distibutionObject, smelist)
 
 
     // Getting the all column names 
@@ -45,8 +45,8 @@ function constructTable(selector) {
 // SME list (to count them easier
 // returns mapping
 // SME number : Teams
-function distributeByTeam(obj, smelist){
-	var teamlist = obj["CSGroups"]
+function distributeByTeam(distibutionObject, smelist){
+	var teamlist = distibutionObject["CSGroups"]
 	var teams = new Array();
 	for (var i = 0; i < teamlist.length; i++){
 
