@@ -23,7 +23,7 @@ var skills = JSON.parse(skillsRaw);
 
 function constructTable(selector) { 
 	distibution = JSON.parse(distributionRaw);
-	smelist = distibutionObject["SMEs"]
+	smelist = distibution["SMEs"]
 
 	// distributes by number of teammates		
 	distributeByTeam(distibution, smelist)
