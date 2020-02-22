@@ -27,27 +27,22 @@ function constructTable(selector) {
 
 	// distributes the current people on the shift	
 	// sorted contains actual commands	
-	var sorted = distribute(unsorted, smelist)
+	//var sorted = distribute(unsorted, smelist)
+	var sorted = []
+	sorted[0] = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"]
+	sorted[1] = ["1","2","3","4","5","6","7","8","9","10","11","12"]
+	sorted[2] = ["1","2","3","4","5","6","7","8"]
+	console.log(sorted.length)
 
+	// creating SME row
+	for (var i = 0; i < smelist.length; i++){
+		$(selector).append(smelist[i]["name"]); 
 
-    // Constructing header of the table actually
-    var cols = Headers(smelist, selector);   
-
-    // Traversing the JSON data 
-    for (var i = 0; i < sorted.length; i++) { 
-        var row = $('<tr/>');    
-        for (var colIndex = 0; colIndex < cols.length; colIndex++) 
-        { 
-            var val = smelist[i][cols[colIndex]]; 
-              
-            // If there is any key, which is matching 
-            // with the column name 
-            if (val == null) val = "";   
-                row.append($('<td/>').html(val)); 
-        } 
-          
-        // Adding each row to the table 
-        $(selector).append(row); 
+		for (var j = 0; j < sorted[i].length; j++){
+			$(selector).append(sorted[i][j]);
+			$(selector).append(" ");	
+		}
+		$(selector).append("<br>");
     } 
 } 
 
@@ -72,28 +67,9 @@ function distribute(unsorted, smelist){
 	// by return b.numMembers - a.numMembers
 
 	var skills
-	var sorted = teams.sort(function(a, b){
+	/*var sorted = teams.sort(function(a, b){
 		
 		return b.numMembers - a.numMembers
 	});
-	teams = sorted;
-
-	
-}
-  
-// creates header of the table
-function Headers(smelist, selector) { 
-    var columns = []; 
-    var header = $('<tr/>'); 
-      
-    for (var i = 0; i < smelist.length; i++) { 
-        var row = JSON.stringify(smelist[i]); 
-	// console.log(row);
-	row = JSON.parse(row)
-	header.append ($('<th/>').html(row["name"]));
-    } 
-      
-    // Appending the header to the table 
-    $(selector).append(header); 
-        return columns; 
+	teams = sorted;*/
 }
