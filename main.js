@@ -66,38 +66,81 @@ function distribute(unsorted, smelist){
 
 	// working on addition
 	for (var i = 0; i < unsorted.length; i++){
-			
-		//adding by difficulty to the SME that has the lower total diff
-		var mindiff = Array.min(diffcount)
-		var minrate = Array.min(ratecount)
-		for (var j = 0; j < smelist.length; j++){
-			
-			if (diffcount[j] == mindiff){
-				
-				// adding to resulting array
-				sorted[j].push(unsorted[i]["name"]);
-				var pushedName = unsorted[i]["name"]
-				
-				// finding the skill
-				var skill = ""
-				for (var k = 0; k < unsorted.length; k++){
 
-					if (pushedName.localeCompare(skills["people"][k]["name"]) == 0){
-						skill = skills["people"][k]["skill"]
-						break;
-					}						
-				}
+		// less important
+		var mindiff = Array.min(diffcount)
+		var maxdiff = Array.max(diffcount)
+		var diffCo = (maxdiff - mindiff) / mindiff
+		// more important
+		var minrate = Array.min(ratecount)
+		var maxrate = Array.max(ratecount)
+		var rateCo = (maxrate - minrate) / minrate
+		console.log("^^^")
+
+		if (diffCo >= rateCo) {
+		//adding by DIFF to the SME that has the lower total diff
+			for (var j = 0; j < smelist.length; j++){
+			
+				if (diffcount[j] == mindiff){
 				
-				diffcount[j] += parseInt(skills["diff-coeffs"][skill])
-				ratecount[j] += parseInt(skills["rate-coeffs"][skill])
-				console.log("pushing to SME #" + j + " user " + unsorted[i]["name"] + " diff " + parseInt(skills["diff-coeffs"][skill]) + " skill " + skill + " total " + diffcount[j])
-				break;
-			}	
+					// adding to resulting array
+					sorted[j].push(unsorted[i]["name"]);
+					var pushedName = unsorted[i]["name"]
+				
+					// finding the skill
+					var skill = ""
+					for (var k = 0; k < unsorted.length; k++){
+
+						if (pushedName.localeCompare(skills["people"][k]["name"]) == 0){
+							skill = skills["people"][k]["skill"]
+							break;
+						}						
+					}
+				
+					diffcount[j] += parseInt(skills["diff-coeffs"][skill])
+					ratecount[j] += parseInt(skills["rate-coeffs"][skill])
+					console.log("pushing by skill to SME #" + j + " user " + unsorted[i]["name"] + " diff " + parseInt(skills["diff-coeffs"][skill]) + " skill " + skill + " total " + diffcount[j])
+					break;
+				}	
+			}
+		} else {
+			//adding by RATE to the SME that has the lower total rate
+			for (var j = 0; j < smelist.length; j++){
+			
+				if (ratecount[j] == minrate){
+				
+					// adding to resulting array
+					sorted[j].push(unsorted[i]["name"]);
+					var pushedName = unsorted[i]["name"]
+				
+					// finding the skill
+					var skill = ""
+					for (var k = 0; k < unsorted.length; k++){
+
+						if (pushedName.localeCompare(skills["people"][k]["name"]) == 0){
+							skill = skills["people"][k]["skill"]
+							break;
+						}						
+					}
+				
+					diffcount[j] += parseInt(skills["diff-coeffs"][skill])
+					ratecount[j] += parseInt(skills["rate-coeffs"][skill])
+					console.log("pushing by rate to SME #" + j + " user " + unsorted[i]["name"] + " diff " + parseInt(skills["rate-coeffs"][skill]) + " skill " + skill + " total " + ratecount[j])
+					break;
+				}	
+			}
+
+
 		}
 	}
 
+	console.log("diff")
 	for (var i = 0; i < 3; i++){
 		console.log(diffcount[i])
+	}
+	console.log("rate")
+	for (var i = 0; i < 3; i++){
+		console.log(ratecount[i])
 	}
 	return sorted;
 }
@@ -107,6 +150,9 @@ function distribute(unsorted, smelist){
 // returns smallest value in array
 Array.min = function( array ){
     return Math.min.apply( Math, array );
+};
+Array.max = function( array ){
+    return Math.max.apply( Math, array );
 };
 
 
