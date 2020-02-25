@@ -62,6 +62,7 @@ function distribute(unsorted, smelist){
 		sorted[i] = [" ", ": "]
 		diffcount[i] = 0
 		ratecount[i] = 0
+		console.log("initialized " + i)
 	}
 
 	// working on addition
@@ -78,6 +79,7 @@ function distribute(unsorted, smelist){
 		console.log("^^^")
 
 		if (diffCo >= rateCo) {
+		console.log ("if")
 		//adding by DIFF to the SME that has the lower total diff
 			for (var j = 0; j < smelist.length; j++){
 			
@@ -89,8 +91,9 @@ function distribute(unsorted, smelist){
 				
 					// finding the skill
 					var skill = ""
-					for (var k = 0; k < unsorted.length; k++){
-
+					for (var k = 0; k < skills["people"].length; k++){
+						console.log(skills)
+						console.log("pushed " + pushedName + " ** " + skills["people"][k]["name"])
 						if (pushedName.localeCompare(skills["people"][k]["name"]) == 0){
 							skill = skills["people"][k]["skill"]
 							break;
@@ -104,9 +107,11 @@ function distribute(unsorted, smelist){
 				}	
 			}
 		} else {
+			console.log ("else")
 			//adding by RATE to the SME that has the lower total rate
 			for (var j = 0; j < smelist.length; j++){
-			
+				console.log ("ratecount " + ratecount[j])
+				console.log ("minrate " + minrate)
 				if (ratecount[j] == minrate){
 				
 					// adding to resulting array
@@ -115,14 +120,16 @@ function distribute(unsorted, smelist){
 				
 					// finding the skill
 					var skill = ""
-					for (var k = 0; k < unsorted.length; k++){
-
+					for (var k = 0; k < skills["people"].length; k++){
+						console.log("pushed " + pushedName + " ** " + skills["people"][k]["name"])
 						if (pushedName.localeCompare(skills["people"][k]["name"]) == 0){
 							skill = skills["people"][k]["skill"]
 							break;
 						}						
 					}
-				
+					
+					console.log(skill)
+					console.log(">>> " + skills["rate-coeffs"][skill])
 					diffcount[j] += parseInt(skills["diff-coeffs"][skill])
 					ratecount[j] += parseInt(skills["rate-coeffs"][skill])
 					console.log("pushing by rate to SME #" + j + " user " + unsorted[i]["name"] + " diff " + parseInt(skills["rate-coeffs"][skill]) + " skill " + skill + " total " + ratecount[j])
