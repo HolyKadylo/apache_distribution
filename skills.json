@@ -17,7 +17,7 @@
 
 		{
 		"name": "One DA",
-		"skill": "newbie"
+		"skill": "jedi"
 		},
 		{
 		"name": "Two DA",
@@ -33,19 +33,19 @@
 		},
 		{
 		"name": "Two LA",
-		"skill": "newbie"
+		"skill": "padawan"
 		},
 		{
 		"name": "Three LA",
-		"skill": "newbie"
+		"skill": "padawan"
 		},
 		{
 		"name": "Four LA",
-		"skill": "newbie"
+		"skill": "padawan"
 		},
 		{
 		"name": "Five LA",
-		"skill": "newbie"	
+		"skill": "padawan"	
 		},
 		{
 		"name": "One PE",
@@ -61,19 +61,19 @@
 		},
 		{
 		"name": "Four PE",
-		"skill": "newbie"		
+		"skill": "guru"		
 		},
 		{
 		"name": "One KA",
-		"skill": "newbie"
+		"skill": "guru"
 		},
 		{
 		"name": "Two KA",
-		"skill": "newbie"
+		"skill": "guru"
 		},
 		{
 		"name": "Three KA",
-		"skill": "newbie"
+		"skill": "padawan"
 		}
 	]
 }
