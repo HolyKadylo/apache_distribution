@@ -9,7 +9,7 @@
 	"rate-coeffs":{
 		"newbie":"10",
 		"padawan":"4",
-		"guru":"1.5",
+		"guru":"1,5",
 		"jedi":"1"
 	},
 
