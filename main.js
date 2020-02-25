@@ -81,16 +81,23 @@ function distribute(unsorted, smelist){
 				// finding the skill
 				var skill = ""
 				for (var k = 0; k < unsorted.length; k++){
+
 					if (pushedName.localeCompare(skills["people"][k]["name"]) == 0){
 						skill = skills["people"][k]["skill"]
+						break;
 					}						
 				}
 				
 				diffcount[j] += parseInt(skills["diff-coeffs"][skill])
 				ratecount[j] += parseInt(skills["rate-coeffs"][skill])
+				console.log("pushing to SME #" + j + " user " + unsorted[i]["name"] + " diff " + parseInt(skills["diff-coeffs"][skill]) + " skill " + skill + " total " + diffcount[j])
 				break;
 			}	
 		}
+	}
+
+	for (var i = 0; i < 3; i++){
+		console.log(diffcount[i])
 	}
 	return sorted;
 }
