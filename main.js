@@ -22,8 +22,10 @@ var skills = JSON.parse(skillsRaw);
 
 
 function constructTable(selector) { 
-	unsorted = JSON.parse(unsortedRaw);
+	unsorted = JSON.parse(unsortedRaw)
 	smelist = unsorted["SMEs"]
+
+	var sorted = distribute (unsorted["CSs"], smelist)
 
 	// distributes the current people on the shift	
 	// sorted contains actual commands	
@@ -50,26 +52,19 @@ function constructTable(selector) {
 // SME list (to count them easier)
 // returns an array that can be easily distributed among SMEs
 function distribute(unsorted, smelist){
-	var teamlist = unsorted["CSGroups"]
-	var teams = new Array();
-	for (var i = 0; i < teamlist.length; i++){
+	skills = JSON.parse(skillsRaw);
+	console.log ("helllo")
+	var diffcount[]
+	var ratecount[]
+	
+	var sorted = []
+	for (var i = 0; i <= unsorted.length; i++){
+		console.log(unsorted["name"])
 
-		//each team with name and the number of teammates			
-		var team = {
-			name:teamlist[i]["name"], 
-			numMembers:teamlist[i]["members"].length
-		};
-		teams.push(team);
 	}
-
-	//https://www.w3schools.com/js/js_array_sort.asp
-	// teams are sorted from biggest to smallest
-	// by return b.numMembers - a.numMembers
-
-	var skills
-	/*var sorted = teams.sort(function(a, b){
 		
-		return b.numMembers - a.numMembers
-	});
-	teams = sorted;*/
+
+
+
+	return sorted;
 }
