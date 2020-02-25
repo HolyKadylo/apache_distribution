@@ -1,16 +1,16 @@
 {
 	"diff-coeffs":{
-		"newbie":"1",
-		"padawan":"1,5",
-		"guru":"1,9",
-		"jedi":"3"
+		"newbie":"10",
+		"padawan":"15",
+		"guru":"19",
+		"jedi":"30"
 	},
 
 	"rate-coeffs":{
-		"newbie":"10",
-		"padawan":"4",
-		"guru":"1,5",
-		"jedi":"1"
+		"newbie":"100",
+		"padawan":"40",
+		"guru":"15",
+		"jedi":"10"
 	},
 
 	"people":[
