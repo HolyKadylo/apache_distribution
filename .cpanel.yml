@@ -5,5 +5,7 @@ deployment:
     - /bin/rm -rf $DEPLOYPATH/*
     #- /bin/cp -R src $DEPLOYPATH
     - /bin/cp * $DEPLOYPATH
+    - /bin/cp /home/sme33/repositories/secure/skills.json~bak $DEPLOYPATH/skills.json
+    - /bin/cp /home/sme33/py.sme.3-3.info/distro.json $DEPLOYPATH/distro.json
     #- /bin/bash /home/sme33/public_html/dev/build.sh
     #- ^^ should be made manually
